@@ -23,6 +23,20 @@ const taskValidationRules: ValidationChain[] = [
     .withMessage("A descrição deve ser uma string"),
 ];
 
+const taskValidationAuth: ValidationChain[] = [
+  body("email")
+    .isString()
+    .withMessage("O email deve ser uma string")
+    .isEmail()
+    .withMessage("Email inválido"),
+
+  body("password")
+    .isString()
+    .withMessage("A senha deve ser uma string")
+    .isLength({ min: 6 })
+    .withMessage("A senha deve ter pelo menos 6 caracteres"),
+];
+
 const handleValidationErrors = (
   req: Request,
   res: Response,
@@ -46,7 +60,6 @@ export const validateTaskUpdate = [
   handleValidationErrors,
 ];
 
-export const validateTaskId = [
-  ...idValidationRules,
-  handleValidationErrors,
-];
+export const validateTaskId = [...idValidationRules, handleValidationErrors];
+
+export const validateSingInUp = [...taskValidationAuth, handleValidationErrors];
