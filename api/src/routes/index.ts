@@ -14,12 +14,15 @@ import {
 import { authMiddleware } from "../app/middleware/auth/authMiddleware";
 import { singin } from "../modules/auth/controllers/singIn";
 import { singup } from "../modules/auth/controllers/singup";
+import { me } from 'src/modules/auth/controllers/me';
 
 export const router = Router();
 router.post("/auth/singin",validateSingInUp , singin);
 router.post("/auth/singup",validateSingInUp, singup);
 
+
 router.use(authMiddleware);
+router.get("/users/me", me);
 
 router.get("/tasks", listTasks);
 

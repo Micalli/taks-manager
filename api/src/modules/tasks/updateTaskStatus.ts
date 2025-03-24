@@ -18,11 +18,9 @@ export async function updateTaskStatus(req: Request, res: Response) {
       return;
     }
 
-    const newTask = task?.status === "active" ? "done" : "active";
-
     await prisma.task.update({
       data: {
-        status: newTask,
+        status: "done",
       },
       where: { id: taskId },
     });

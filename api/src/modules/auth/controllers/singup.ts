@@ -6,12 +6,12 @@ import { generateAccessToken } from '../services/authService';
 import { prisma } from 'src/config/prisma';
 export async function singup(req: Request, res: Response) {
   try {
-    const { email, password } = req.body;
+    const { name, email, password } = req.body;
 
     const hashedPassword = await hash(password, 10);
 
     const user = await prisma.user.create({
-      data: { email, password: hashedPassword },
+      data: { name, email, password: hashedPassword },
     });
     const accessToken = await generateAccessToken(user.id);
 
