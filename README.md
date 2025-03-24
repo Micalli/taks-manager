@@ -1,6 +1,6 @@
 
 # Task Manager
-![demo](https://raw.githubusercontent.com/Micalli/Portifolio-AI/refs/heads/main/front/static/demo.png)
+![demo](https://raw.githubusercontent.com/Micalli/tasks-manager/refs/heads/main/front/static/demo.png)
 
 ## Tecnologias
 
@@ -15,7 +15,7 @@ Sistema simples de gestão de tarefas
 #### Clonando o projeto
 
 ```bash
-git clone https://github.com/Micalli/taks-manager.git && cd taks-manager
+git clone https://github.com/Micalli/tasks-manager.git && cd tasks-manager
 ```
 
 #### Instale as dependencias
@@ -48,7 +48,7 @@ Em seguida dê esses comandos para criar a tabela dentro do container
 docker exec -it pg bash
 
 #Entra no postgres
-psql -U  root
+psql -U root
 
 #Cria o banco
 CREATE DATABASE nomeDoBanco;
@@ -59,7 +59,7 @@ CREATE DATABASE nomeDoBanco;
 cd api && npm run dev
 ```
 
-#### Rodando o  front end
+#### Rodando o front end
 
 ```bash
 cd frontend && npm run dev
