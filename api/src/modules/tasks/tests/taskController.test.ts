@@ -26,7 +26,7 @@ describe("GET /tasks", () => {
       .get("/tasks")
       .set(
         "Authorization",
-        "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI0NjExZWM5Yy00N2RkLTRiZDctOWZhNy1kZGM2ZWQxZThjNzgiLCJpYXQiOjE3NDI2ODg0NjksImV4cCI6MTc0MjcyNDQ2OX0.jBzXdiTYczCw_9M81HH-3CsP1vjcCeGAeLJO0GsPVcY"
+        "Bearer [Token válido]"
       );
 
     if (response.status !== 200) {
@@ -61,7 +61,7 @@ describe("POST /tasks", () => {
       .post("/tasks")
       .set(
         "Authorization",
-        "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI0NjExZWM5Yy00N2RkLTRiZDctOWZhNy1kZGM2ZWQxZThjNzgiLCJpYXQiOjE3NDI2ODg0NjksImV4cCI6MTc0MjcyNDQ2OX0.jBzXdiTYczCw_9M81HH-3CsP1vjcCeGAeLJO0GsPVcY"
+        "Bearer [Token válido]"
       )
       .send(validTask);
 
@@ -81,7 +81,7 @@ describe("POST /tasks", () => {
       .post("/tasks")
       .set(
         "Authorization",
-        "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI0NjExZWM5Yy00N2RkLTRiZDctOWZhNy1kZGM2ZWQxZThjNzgiLCJpYXQiOjE3NDI2ODg0NjksImV4cCI6MTc0MjcyNDQ2OX0.jBzXdiTYczCw_9M81HH-3CsP1vjcCeGAeLJO0GsPVcY"
+        "Bearer [Token válido]"
       )
       .send({ descrption: "Tarefa Sem Titulo" });
 
